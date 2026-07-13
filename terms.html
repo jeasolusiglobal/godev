@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Jea Solusi Studio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://jeasolusiglobal.github.io/godev/images/favicon.png">
+    
+    <style>
+        /* Base Variables & Theme */
+        :root {
+            --bg-color: #0f172a; 
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8; 
+            --accent-hover: #0284c7;
+            --card-bg: #1e293b;
+            --card-border: #334155;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: var(--bg-color); 
+            color: var(--text-main); 
+            margin: 0; 
+            padding: 0; 
+            overflow-x: hidden; 
+            line-height: 1.7;
+        }
+
+        /* Navbar */
+        nav { 
+            position: sticky; 
+            top: 0; 
+            background: rgba(15, 23, 42, 0.85); 
+            backdrop-filter: blur(12px); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            padding: 1.2rem 5%; 
+            z-index: 100; 
+            border-bottom: 1px solid var(--card-border); 
+        }
+        .logo { 
+            font-size: 1.5rem; 
+            font-weight: bold; 
+            color: var(--accent); 
+            text-decoration: none; 
+            letter-spacing: 1px;
+        }
+        .nav-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+        .nav-links a { 
+            color: var(--text-main); 
+            text-decoration: none; 
+            font-size: 0.95rem;
+            transition: color 0.3s; 
+        }
+        .nav-links a:hover { color: var(--accent); }
+        .nav-links a.active { color: var(--accent); font-weight: bold; }
+
+        /* Legal Content Layout */
+        .legal-wrapper {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 40px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .legal-header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 30px;
+        }
+
+        .legal-header h1 {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            color: var(--text-main);
+        }
+
+        .legal-header p {
+            color: var(--accent);
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .legal-content h2 {
+            font-size: 1.4rem;
+            color: var(--accent);
+            margin-top: 40px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .legal-content p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .legal-content ul {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .legal-content li {
+            margin-bottom: 10px;
+        }
+
+        .highlight-box {
+            background: rgba(56, 189, 248, 0.05);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 30px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: var(--text-main);
+            font-style: italic;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav { flex-direction: column; gap: 1rem; padding: 1rem; }
+            .nav-links { justify-content: center; gap: 1rem; }
+            .legal-wrapper { margin: 20px; padding: 25px; }
+            .legal-header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="https://jeasolusiglobal.github.io/godev/" class="logo">Jea Solusi Studio</a>
+        <div class="nav-links">
+            <a href="https://jeasolusiglobal.github.io/godev/contact.html">Contact</a>
+            <a href="https://jeasolusiglobal.github.io/godev/privacy-policy.html">Privacy Policy</a>
+            <a href="https://jeasolusiglobal.github.io/godev/terms.html" class="active">Terms</a>
+            <a href="https://jeasolusiglobal.github.io/godev/services/">Service</a>
+            <a href="https://jeasolusiglobal.github.io/godev/desktop-software/">Desktop Apps</a>
+            <a href="https://jeasolusiglobal.github.io/godev/mobile-apps/">Mobile Apps</a>
+            <a href="https://jeasolusiglobal.github.io/godev/downloads/">Downloads</a>
+            <a href="https://jeasolusiglobal.github.io/godev/gallery/">Gallery</a>
+            <a href="https://jeasolusiglobal.github.io/godev/blog/">Blog</a>
+        </div>
+    </nav>
+
+    <!-- Terms of Service Content -->
+    <section class="legal-wrapper">
+        <div class="legal-header">
+            <h1>Terms of Service</h1>
+            <p>Pembaruan Terakhir: 14 Juli 2026</p>
+        </div>
+
+        <div class="legal-content">
+            <p>Selamat datang di JEA Solusi Studio. Dengan mengakses situs web kami, mengunduh perangkat lunak desktop (Software), atau menginstal aplikasi seluler (APK/Mobile Apps) kami, Anda setuju untuk terikat oleh Syarat dan Ketentuan berikut. Harap baca dengan saksama sebelum menggunakan layanan kami.</p>
+
+            <h2>1. Lisensi dan Penggunaan Perangkat Lunak</h2>
+            <p>Seluruh perangkat lunak, kode sumber (jika tidak dinyatakan sebagai open-source), aplikasi *mobile*, dan desain antarmuka yang disediakan oleh JEA Solusi Studio adalah kekayaan intelektual kami. Kami memberikan Anda lisensi terbatas, non-eksklusif, dan tidak dapat dipindahtangankan untuk menggunakan perangkat lunak kami sesuai dengan fungsi yang dimaksudkan. Anda dilarang keras merekayasa balik (*reverse engineering*), memodifikasi, atau mendistribusikan ulang aplikasi kami tanpa izin tertulis dari pihak JEA Solusi Studio.</p>
+
+            <h2>2. Penafian Jaminan ("As-Is" Basis)</h2>
+            <p>Di JEA Solusi Studio, kami bangga membangun infrastruktur kode yang kuat dan efisien. Namun, dunia teknologi bersifat dinamis. Oleh karena itu, seluruh layanan, situs web, perangkat lunak desktop, dan APK kami disediakan dengan dasar "Sebagaimana Adanya" (*As-Is*) dan "Sebagaimana Tersedia" (*As-Available*).</p>
+            <p>Kami tidak memberikan jaminan eksplisit maupun implisit bahwa perangkat lunak kami akan 100% bebas dari gangguan (*bugs*) di setiap ekosistem sistem operasi, atau bahwa setiap *error* dapat segera diperbaiki. Penggunaan perangkat lunak kami sepenuhnya merupakan risiko Anda sendiri.</p>
+
+            <h2>3. Batasan Tanggung Jawab (Limitation of Liability)</h2>
+            <p>Sejauh diizinkan oleh hukum yang berlaku di Republik Indonesia, JEA Solusi Studio beserta jajaran direksi, staf, dan pengembang kami tidak akan bertanggung jawab atas kerusakan langsung, tidak langsung, insidental, atau konsekuensial. Hal ini mencakup, namun tidak terbatas pada: hilangnya keuntungan bisnis, kerusakan perangkat keras, hilangnya data operasional, atau kerugian finansial lainnya yang timbul dari penggunaan atau ketidakmampuan Anda dalam menggunakan layanan dan perangkat lunak kami.</p>
+
+            <h2>4. Pernyataan Batasan Domain Profesional</h2>
+            <div class="highlight-box">
+                <p><strong>Disclaimer Profesional Tertentu:</strong> Seluruh algoritma, analisis data, utilitas pelacakan, dan *output* yang dihasilkan oleh aplikasi JEA Solusi Studio dirancang murni untuk keperluan efisiensi teknis, operasional, dan informasional. </p>
+                <p style="margin-top: 10px;">Meskipun sistem kami dibangun dengan metrik logika yang presisi, kami adalah insinyur rekayasa perangkat lunak (*software engineers*), bukan praktisi medis, penasihat keuangan, atau penasihat hukum. Jika *output* dari sistem aplikasi kami menyinggung keputusan krusial di ranah kesehatan, legalitas hukum, atau investasi finansial, pengguna diwajibkan untuk memvalidasi data tersebut dengan praktisi/profesional bersertifikat di bidang terkait. JEA Solusi Studio secara tegas menolak kewajiban atas segala konsekuensi keputusan yang diambil tanpa adanya verifikasi profesional dari ahli non-IT.</p>
+            </div>
+
+            <h2>5. Pembaruan Aplikasi dan Layanan</h2>
+            <p>Kami berhak untuk mengubah, menangguhkan, atau menghentikan perangkat lunak atau aplikasi seluler tertentu (termasuk dukungan terhadap versi OS lama) kapan saja demi menjaga standar keamanan dan kualitas. Kami tidak berkewajiban untuk menyediakan *update* sistem secara permanen untuk perangkat lunak yang telah dinyatakan mencapai *End of Life* (EoL).</p>
+
+            <h2>6. Hukum yang Berlaku</h2>
+            <p>Syarat dan Ketentuan ini diatur dan ditafsirkan sesuai dengan hukum yang berlaku di Republik Indonesia. Segala sengketa yang mungkin timbul terkait dengan ketentuan ini akan diselesaikan secara musyawarah, atau melalui yurisdiksi pengadilan yang berwenang di wilayah operasional JEA Solusi Studio.</p>
+
+            <h2 style="margin-top: 50px; font-size: 1.2rem; border-top: 1px solid var(--card-border); padding-top: 20px;">Hubungi Kami</h2>
+            <p>Jika Anda memiliki pertanyaan mengenai persyaratan ini, atau ingin mendiskusikan klausul kustom untuk proyek pengembangan khusus perusahaan Anda, silakan hubungi tim kami di <strong>admin@jeasolusi.com</strong>.</p>
+        </div>
+    </section>
+
+</body>
+</html>
