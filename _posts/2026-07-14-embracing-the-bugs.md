@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Embracing the Bugs: Why Features are Just Glitches with Good PR"
-date: 2026-07-14 10:00:00 +0700
+date: 2026-07-12 10:00:00 +0700
 categories: dev-diaries motivation
 ---
 
