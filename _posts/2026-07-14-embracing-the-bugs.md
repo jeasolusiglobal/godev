@@ -3,6 +3,7 @@ layout: post
 title: "Embracing the Bugs: Why Features are Just Glitches with Good PR"
 date: 2026-07-12 10:00:00 +0700
 categories: dev-diaries motivation
+image: /images/frustrated-developer-coding-late.webp
 ---
 
 Let’s be honest for a second. We’ve all been there—staring at a screen at 2 AM, watching our Python scripts compile or waiting for a mobile build, praying to the Silicon Gods that it works on the first try. Spoiler alert: it never does. 
