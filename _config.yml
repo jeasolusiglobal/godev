@@ -3,3 +3,7 @@ description: Catatan, dokumentasi, dan eksperimen kode.
 theme: minima
 baseurl: "/godev"
 permalink: /:year/:month/:day/:title/
+collections:
+  services:
+    output: true
+    permalink: /services/:title/
