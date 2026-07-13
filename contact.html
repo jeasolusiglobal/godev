@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Jea Solusi Studio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://jeasolusiglobal.github.io/godev/images/favicon.png">
+    
+    <style>
+        /* Base Variables & Theme (Konsisten dengan halaman utama) */
+        :root {
+            --bg-color: #0f172a; 
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8; 
+            --accent-hover: #0284c7;
+            --card-bg: #1e293b;
+            --card-border: #334155;
+            --wa-color: #25d366;
+            --wa-hover: #20b858;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: var(--bg-color); 
+            color: var(--text-main); 
+            margin: 0; 
+            padding: 0; 
+            overflow-x: hidden; 
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav { 
+            position: sticky; 
+            top: 0; 
+            background: rgba(15, 23, 42, 0.85); 
+            backdrop-filter: blur(12px); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            padding: 1.2rem 5%; 
+            z-index: 100; 
+            border-bottom: 1px solid var(--card-border); 
+        }
+        .logo { 
+            font-size: 1.5rem; 
+            font-weight: bold; 
+            color: var(--accent); 
+            text-decoration: none; 
+            letter-spacing: 1px;
+        }
+        .nav-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+        .nav-links a { 
+            color: var(--text-main); 
+            text-decoration: none; 
+            font-size: 0.95rem;
+            transition: color 0.3s; 
+        }
+        .nav-links a:hover { color: var(--accent); }
+        .nav-links a.active { color: var(--accent); font-weight: bold; }
+
+        /* Contact Section */
+        .contact-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 5%;
+            gap: 50px;
+            min-height: 70vh;
+        }
+
+        /* Left Side: Contact Info & Buttons */
+        .contact-info {
+            flex: 1;
+            animation: slideInLeft 1s ease forwards;
+        }
+
+        .contact-info h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .contact-info h1 span {
+            color: var(--accent);
+        }
+
+        .contact-info p {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+
+        /* Action Buttons */
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-card {
+            display: flex;
+            align-items: center;
+            padding: 20px 25px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .contact-card.email:hover { border-color: var(--accent); }
+        .contact-card.whatsapp:hover { border-color: var(--wa-color); }
+
+        .icon-wrapper {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 20px;
+        }
+
+        .email .icon-wrapper { background: rgba(56, 189, 248, 0.1); color: var(--accent); }
+        .whatsapp .icon-wrapper { background: rgba(37, 211, 102, 0.1); color: var(--wa-color); }
+
+        .card-content h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.2rem;
+        }
+
+        .card-content span {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Right Side: Professional Image */
+        .contact-image {
+            flex: 1;
+            position: relative;
+            animation: slideInRight 1s ease forwards;
+        }
+
+        .contact-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            object-fit: cover;
+            border: 1px solid var(--card-border);
+            transition: transform 0.5s ease;
+        }
+
+        .contact-image img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Decorative Blur Behind Image */
+        .contact-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+            background: linear-gradient(45deg, var(--accent), var(--wa-color));
+            filter: blur(50px);
+            opacity: 0.2;
+            z-index: -1;
+            border-radius: 20px;
+        }
+
+        /* Animations */
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .contact-container {
+                flex-direction: column;
+                text-align: center;
+                margin: 40px auto;
+            }
+            .contact-info p {
+                margin: 0 auto 40px auto;
+            }
+            .contact-methods {
+                align-items: center;
+            }
+            .contact-card {
+                width: 100%;
+                max-width: 400px;
+                text-align: left;
+            }
+            .contact-image {
+                margin-top: 20px;
+                width: 100%;
+                max-width: 600px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav { flex-direction: column; gap: 1rem; padding: 1rem; }
+            .nav-links { justify-content: center; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="https://jeasolusiglobal.github.io/godev/" class="logo">Jea Solusi Studio</a>
+        <div class="nav-links">
+            <a href="https://jeasolusiglobal.github.io/godev/contact.html" class="active">Contact</a>
+            <a href="https://jeasolusiglobal.github.io/godev/privacy-policy.html">Privacy Policy</a>
+            <a href="https://jeasolusiglobal.github.io/godev/terms.html">Terms</a>
+            <a href="https://jeasolusiglobal.github.io/godev/services/">Service</a>
+            <a href="https://jeasolusiglobal.github.io/godev/desktop-software/">Desktop Apps</a>
+            <a href="https://jeasolusiglobal.github.io/godev/mobile-apps/">Mobile Apps</a>
+            <a href="https://jeasolusiglobal.github.io/godev/downloads/">Downloads</a>
+            <a href="https://jeasolusiglobal.github.io/godev/gallery/">Gallery</a>
+            <a href="https://jeasolusiglobal.github.io/godev/blog/">Blog</a>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-container">
+        
+        <!-- Bagian Kiri: Informasi Kontak -->
+        <div class="contact-info">
+            <h1>Let's Build <br><span>Something Great</span></h1>
+            <p>Punya ide aplikasi, butuh solusi teknis, atau ingin berkonsultasi mengenai proyek IT Anda? Tim JEA Solusi Studio siap membantu Anda mengubah visi menjadi kode yang nyata.</p>
+            
+            <div class="contact-methods">
+                
+                <!-- Kartu Email -->
+                <a href="mailto:admin@jeasolusi.com?subject=Konsultasi%20Proyek%20IT%20-%20JEA%20Solusi%20Studio" class="contact-card email">
+                    <div class="icon-wrapper">
+                        ✉️
+                    </div>
+                    <div class="card-content">
+                        <h3>Email Us</h3>
+                        <span>admin@jeasolusi.com</span>
+                    </div>
+                </a>
+
+                <!-- Kartu WhatsApp -->
+                <a href="https://wa.me/6289633057580?text=Halo%20JEA%20Solusi%20Studio,%20saya%20ingin%20berkonsultasi%20mengenai%20layanan%20IT." class="contact-card whatsapp" target="_blank" rel="noopener noreferrer">
+                    <div class="icon-wrapper">
+                        💬
+                    </div>
+                    <div class="card-content">
+                        <h3>WhatsApp Chat</h3>
+                        <span>+62 896 3305 7580</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- Bagian Kanan: Gambar Representatif -->
+        <div class="contact-image">
+            <!-- Menggunakan gambar profesional dari Unsplash dengan kompresi web (w=800&q=80) untuk loading cepat -->
+            <img src="https://images.unsplash.com/photo-1516387938699-a93567ec168e?auto=format&fit=crop&w=800&q=80" alt="JEA Solusi Studio Workspace">
+        </div>
+
+    </section>
+
+</body>
+</html>
