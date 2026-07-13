@@ -55,6 +55,7 @@ collections:
 plugins:
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Konfigurasi Paginasi Halaman Blog
 paginate: 6
